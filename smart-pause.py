@@ -17,7 +17,7 @@ height = None
 
 faceCascade = cv.Load("face.xml")
 font = cv.InitFont(cv.CV_FONT_HERSHEY_SIMPLEX,0.4,0.4,1,1,1)
-fontLogo = cv.InitFont(cv.CV_FONT_HERSHEY_TRIPLEX,1,1,1,1,1)
+fontLogo = cv.InitFont(cv.CV_FONT_HERSHEY_TRIPLEX,0.6,0.6,1,1,1)
 
 
 if width is None:
@@ -100,7 +100,7 @@ def FaceDetect(image, faceCascade):
 			print "Pause"
 			os.system("xdotool key space")
 			pauseCount=0
-	cv.PutText(image,"Face-Pause V1.0", (10,30),fontLogo,cv.RGB(0, 0, 0))
+	cv.PutText(image,"Smart-Pause V1.1", (10,30),fontLogo,cv.RGB(0, 0, 0))
 	return image
 
 
@@ -109,7 +109,7 @@ while True:
 	img = cv.QueryFrame(capture)
 	cv.Flip(img,img,1)
 	image = FaceDetect(img, faceCascade)
-	cv.ShowImage("camera", image)
+	cv.ShowImage("Smart-Pause", image)
 	k = cv.WaitKey(50);
 	if k in [27, ord('Q'), ord('q')]:
 		break
