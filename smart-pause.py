@@ -32,10 +32,6 @@ else:
 
 result = cv.CreateImage((width,height),cv.IPL_DEPTH_8U,3) 
 
-def Load():
-
-	return (faceCascade, eyeCascade)
-
 
 def FaceDetect(image, faceCascade):
 	global playFlag,pauseFlag,playCount,pauseCount
