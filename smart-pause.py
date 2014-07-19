@@ -8,7 +8,7 @@ pauseFlag = False
 playCount=0
 pauseCount=0
 
-cv.NamedWindow("camera", 1)
+cv.NamedWindow("Smart-Pause", 1)
 cameraSelect=input("""Enter Camera Number (Default Camera is 0):""")
 capture = cv.CreateCameraCapture(cameraSelect)
 
